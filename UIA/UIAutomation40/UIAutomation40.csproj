@@ -1,0 +1,1392 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{5D334BFC-BFBD-4E6A-B1E5-5A4767E8311F}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>Library</OutputType>
+    <RootNamespace>UIAutomation</RootNamespace>
+    <AssemblyName>UIAutomation</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <NoStdLib>False</NoStdLib>
+    <DebugType>None</DebugType>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugSymbols>false</DebugSymbols>
+    <ApplicationManifest>..\UIAutomationSpy\app.manifest</ApplicationManifest>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NoWin32Manifest>False</NoWin32Manifest>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release35' ">
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'Release35' ">
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <BaseAddress>4194304</BaseAddress>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|Release35'">
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|Release35'">
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release35|Release35'">
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release35|x86'">
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <FileAlignment>4096</FileAlignment>
+    <DebugType>Full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <FileAlignment>4096</FileAlignment>
+    <DebugType>None</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release35|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <FileAlignment>4096</FileAlignment>
+    <DebugType>None</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core">
+      <HintPath>..\..\packages\Castle.Core.3.3.3\lib\net40-client\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.UIAutomationClient, Version=12.0.20617.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\UIAComWrapper.1.1.0.14\lib\net40\Interop.UIAutomationClient.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject">
+      <HintPath>..\..\packages\Ninject.3.2.2.0\lib\net40\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Extensions.ChildKernel">
+      <HintPath>..\..\packages\Ninject.Extensions.ChildKernel.3.2.0.0\lib\net40\Ninject.Extensions.ChildKernel.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Extensions.Conventions">
+      <HintPath>..\..\packages\Ninject.Extensions.Conventions.3.2.0.0\lib\net40\Ninject.Extensions.Conventions.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Extensions.NamedScope">
+      <HintPath>..\..\packages\Ninject.Extensions.NamedScope.3.2.0.0\lib\net40\Ninject.Extensions.NamedScope.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\NLog.4.4.0\lib\net40\NLog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management.Automation, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.PowerShell.3.ReferenceAssemblies.1.0.0\lib\net4\System.Management.Automation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Presentation">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAComWrapper, Version=1.1.0.14, Culture=neutral, PublicKeyToken=78cbcf77433a85e5, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\UIAComWrapper.1.1.0.14\lib\net40\UIAComWrapper.dll</HintPath>
+      <Private>True</Private>
+      <Aliases>global</Aliases>
+    </Reference>
+    <Reference Include="UIAutomationClient">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+      <Aliases>UIANET,UIACOM</Aliases>
+    </Reference>
+    <Reference Include="UIAutomationTypes">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+      <Aliases>UIANET</Aliases>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsInput">
+      <HintPath>..\..\packages\InputSimulator.1.0.4.0\lib\net20\WindowsInput.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\PSTestLib\PSTestLibrary\PSTestLibrary.csproj">
+      <Project>{E4499004-DAE5-4700-B212-4CDEA3080BC5}</Project>
+      <Name>PSTestLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Tmx\Tmx.Core\Tmx.Core.csproj">
+      <Project>{069651A0-FE15-42E2-89D5-9A761A47B143}</Project>
+      <Name>Tmx.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Tmx\Tmx.Interfaces\Tmx.Interfaces.csproj">
+      <Project>{9C5DA25F-6A59-4F97-B107-64DD549CB800}</Project>
+      <Name>Tmx.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Tmx\Tmx\Tmx.csproj">
+      <Project>{DFFF7F28-CFA4-4EE5-84F0-4A12A415BC0C}</Project>
+      <Name>Tmx</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\UIAutomation\Commands\Banner\AddUIABannerTextCommand.cs">
+      <Link>Commands\Banner\AddUIABannerTextCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Banner\HideUIABannerCommand.cs">
+      <Link>Commands\Banner\HideUIABannerCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Banner\ShowUIABannerCommand.cs">
+      <Link>Commands\Banner\ShowUIABannerCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Cache\StartUiaCachedModeCommand.cs">
+      <Link>Commands\Cache\StartUiaCachedModeCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Cache\StopUiaCachedModeCommand.cs">
+      <Link>Commands\Cache\StopUiaCachedModeCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Common\ClearUIAControlTextCommand.cs">
+      <Link>Commands\Common\ClearUIAControlTextCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Common\GetUIAActiveWindowCommand.cs">
+      <Link>Commands\Common\GetUIAActiveWindowCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Common\GetUIAFocusCommand.cs">
+      <Link>Commands\Common\GetUIAFocusCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Common\HideUIACurrentHighlighterCommand.cs">
+      <Link>Commands\Common\HideUIACurrentHighlighterCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Common\InvokeUIAControlClickCommand.cs">
+      <Link>Commands\Common\InvokeUIAControlClickCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Common\InvokeUIAControlContextMenuCommand.cs">
+      <Link>Commands\Common\InvokeUIAControlContextMenuCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Common\InvokeUIAScriptCommand.cs">
+      <Link>Commands\Common\InvokeUIAScriptCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Common\MoveUIACursorCommand.cs">
+      <Link>Commands\Common\MoveUIACursorCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Common\SaveUIAScreenshotCommand.cs">
+      <Link>Commands\Common\SaveUIAScreenshotCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Common\SetUIAControlKeysCommand.cs">
+      <Link>Commands\Common\SetUIAControlKeysCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Common\SetUIAControlTextCommand.cs">
+      <Link>Commands\Common\SetUIAControlTextCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Common\SetUIAFocusCommand.cs">
+      <Link>Commands\Common\SetUIAFocusCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Common\ShowUIADesktopCommand.cs">
+      <Link>Commands\Common\ShowUIADesktopCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Container\NewUIAContainerCommand.cs">
+      <Link>Commands\Container\NewUIAContainerCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Convert\ConvertFromUIADataGridCommand.cs">
+      <Link>Commands\Convert\ConvertFromUIADataGridCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Convert\ConvertFromUIAListCommand.cs">
+      <Link>Commands\Convert\ConvertFromUIAListCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Convert\ConvertFromUIATableCommand.cs">
+      <Link>Commands\Convert\ConvertFromUIATableCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Convert\ConvertToUIAHashtableCommand.cs">
+      <Link>Commands\Convert\ConvertToUIAHashtableCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Convert\ConvertToUiaSearchCriteriaCommand.cs">
+      <Link>Commands\Convert\ConvertToUiaSearchCriteriaCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Discovery\GetUIAControlFromHandleCommand.cs">
+      <Link>Commands\Discovery\GetUIAControlFromHandleCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Discovery\GetUIAControlFromPointCommand.cs">
+      <Link>Commands\Discovery\GetUIAControlFromPointCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Discovery\GetUIACurrentPatternCommand.cs">
+      <Link>Commands\Discovery\GetUIACurrentPatternCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Discovery\GetUIACurrentPatternFromPointCommand.cs">
+      <Link>Commands\Discovery\GetUIACurrentPatternFromPointCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Event\GetUIARegisteredEventCommand.cs">
+      <Link>Commands\Event\GetUIARegisteredEventCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Event\RegisterUIAFocusChangedEventCommand.cs">
+      <Link>Commands\Event\RegisterUIAFocusChangedEventCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Event\RegisterUIAInvokedEventCommand.cs">
+      <Link>Commands\Event\RegisterUIAInvokedEventCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Event\RegisterUIAMenuClosedEventCommand.cs">
+      <Link>Commands\Event\RegisterUIAMenuClosedEventCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Event\RegisterUIAMenuOpenedEventCommand.cs">
+      <Link>Commands\Event\RegisterUIAMenuOpenedEventCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Event\RegisterUIAPropertyChangedEventCommand.cs">
+      <Link>Commands\Event\RegisterUIAPropertyChangedEventCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Event\RegisterUIAStructureChangedEventCommand.cs">
+      <Link>Commands\Event\RegisterUIAStructureChangedEventCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Event\RegisterUIATextChangedEventCommand.cs">
+      <Link>Commands\Event\RegisterUIATextChangedEventCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Event\RegisterUIATextSelectionChangedEventCommand.cs">
+      <Link>Commands\Event\RegisterUIATextSelectionChangedEventCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Event\RegisterUIAToolTipClosedEventCommand.cs">
+      <Link>Commands\Event\RegisterUIAToolTipClosedEventCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Event\RegisterUIAToolTipOpenedEventCommand.cs">
+      <Link>Commands\Event\RegisterUIAToolTipOpenedEventCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Event\RegisterUIAUnexpectedWindowCommand.cs">
+      <Link>Commands\Event\RegisterUIAUnexpectedWindowCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Event\RegisterUIAWindowClosedEventCommand.cs">
+      <Link>Commands\Event\RegisterUIAWindowClosedEventCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Event\RegisterUIAWindowOpenedEventCommand.cs">
+      <Link>Commands\Event\RegisterUIAWindowOpenedEventCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Event\UnregisterUIAEventCommand.cs">
+      <Link>Commands\Event\UnregisterUIAEventCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\ExecutionPlan\HideUIAExecutionPlanCommand.cs">
+      <Link>Commands\ExecutionPlan\HideUIAExecutionPlanCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\ExecutionPlan\ShowUIAExecutionPlanCommand.cs">
+      <Link>Commands\ExecutionPlan\ShowUIAExecutionPlanCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Get\GetUIAControlCommand.cs">
+      <Link>Commands\Get\GetUIAControlCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Get\GetUIADesktopCommand.cs">
+      <Link>Commands\Get\GetUIADesktopCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Get\GetUIAWindowCommand.cs">
+      <Link>Commands\Get\GetUIAWindowCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Get\TestUIAControlStateCommand.cs">
+      <Link>Commands\Get\TestUIAControlStateCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Hotkey\InvokeUIAHotKeyCommand.cs">
+      <Link>Commands\Hotkey\InvokeUIAHotKeyCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Hotkey\ShowUIAContextMenuCommand.cs">
+      <Link>Commands\Hotkey\ShowUIAContextMenuCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Hotkey\ShowUIADesktopCommand.cs">
+      <Link>Commands\Hotkey\ShowUIADesktopCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Hotkey\ShowUIAMetroCharmCommand.cs">
+      <Link>Commands\Hotkey\ShowUIAMetroCharmCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Hotkey\ShowUIAMetroMenuCommand.cs">
+      <Link>Commands\Hotkey\ShowUIAMetroMenuCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Hotkey\ShowUIAMetroStartScreenCommand.cs">
+      <Link>Commands\Hotkey\ShowUIAMetroStartScreenCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Hotkey\ShowUIAStartRunCommand.cs">
+      <Link>Commands\Hotkey\ShowUIAStartRunCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Hotkey\ShowUIATaskManagerCommand.cs">
+      <Link>Commands\Hotkey\ShowUIATaskManagerCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\No\WaitUIANoWindowCommand.cs">
+      <Link>Commands\No\WaitUIANoWindowCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Pattern\GetUIASelectedItemCommand.cs">
+      <Link>Commands\Pattern\GetUIASelectedItemCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Pattern\GetUIASelectionItemStateCommand.cs">
+      <Link>Commands\Pattern\GetUIASelectionItemStateCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Pattern\GetUIASelectionPatternCommand.cs">
+      <Link>Commands\Pattern\GetUIASelectionPatternCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Pattern\InvokeUIACollapsePatternCommand.cs">
+      <Link>Commands\Pattern\InvokeUIACollapsePatternCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Pattern\InvokeUIADockPatternGetCommand.cs">
+      <Link>Commands\Pattern\InvokeUIADockPatternGetCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Pattern\InvokeUIADockPatternSetCommand.cs">
+      <Link>Commands\Pattern\InvokeUIADockPatternSetCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Pattern\InvokeUIAExpandPatternCommand.cs">
+      <Link>Commands\Pattern\InvokeUIAExpandPatternCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Pattern\InvokeUIAInvokePatternCommand.cs">
+      <Link>Commands\Pattern\InvokeUIAInvokePatternCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Pattern\InvokeUIARangeValuePatternGetCommand.cs">
+      <Link>Commands\Pattern\InvokeUIARangeValuePatternGetCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Pattern\InvokeUIARangeValuePatternSetCommand.cs">
+      <Link>Commands\Pattern\InvokeUIARangeValuePatternSetCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Pattern\InvokeUIAScrollItemPatternCommand.cs">
+      <Link>Commands\Pattern\InvokeUIAScrollItemPatternCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Pattern\InvokeUIAScrollPatternCommand.cs">
+      <Link>Commands\Pattern\InvokeUIAScrollPatternCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Pattern\InvokeUIASelectionItemPatternCommand.cs">
+      <Link>Commands\Pattern\InvokeUIASelectionItemPatternCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Pattern\InvokeUIATextPatternGetCommand.cs">
+      <Link>Commands\Pattern\InvokeUIATextPatternGetCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Pattern\InvokeUIATextPatternSetCommand.cs">
+      <Link>Commands\Pattern\InvokeUIATextPatternSetCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Pattern\InvokeUIATogglePatternCommand.cs">
+      <Link>Commands\Pattern\InvokeUIATogglePatternCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Pattern\InvokeUIAToggleStateCommand.cs">
+      <Link>Commands\Pattern\InvokeUIAToggleStateCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Pattern\InvokeUIAToggleStateSetCommand.cs">
+      <Link>Commands\Pattern\InvokeUIAToggleStateSetCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Pattern\InvokeUIATransformPatternMoveCommand.cs">
+      <Link>Commands\Pattern\InvokeUIATransformPatternMoveCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Pattern\InvokeUIATransformPatternResizeCommand.cs">
+      <Link>Commands\Pattern\InvokeUIATransformPatternResizeCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Pattern\InvokeUIATransformPatternRotateCommand.cs">
+      <Link>Commands\Pattern\InvokeUIATransformPatternRotateCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Pattern\InvokeUIAValuePatternGetCommand.cs">
+      <Link>Commands\Pattern\InvokeUIAValuePatternGetCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Pattern\InvokeUIAValuePatternSetCommand.cs">
+      <Link>Commands\Pattern\InvokeUIAValuePatternSetCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Pattern\InvokeUIAWindowPatternCommand.cs">
+      <Link>Commands\Pattern\InvokeUIAWindowPatternCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Profile\GetUIATestProfileCommand.cs">
+      <Link>Commands\Profile\GetUIATestProfileCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Profile\NewUIATestProfileCommand.cs">
+      <Link>Commands\Profile\NewUIATestProfileCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Profile\SetUIACurrentTestProfileCommand.cs">
+      <Link>Commands\Profile\SetUIACurrentTestProfileCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\RDP\ConnectUIARemoteDesktopSessionCommand.cs">
+      <Link>Commands\RDP\ConnectUIARemoteDesktopSessionCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\RDP\DisconnectUIARemoteDesktopSessionCommand.cs">
+      <Link>Commands\RDP\DisconnectUIARemoteDesktopSessionCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\RDP\NewUIARemoteDesktopProtocolFileCommand.cs">
+      <Link>Commands\RDP\NewUIARemoteDesktopProtocolFileCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\RDP\StartUIARemoteDesktopSessionCommand.cs">
+      <Link>Commands\RDP\StartUIARemoteDesktopSessionCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\RDP\StopUIARemoteDesktopSessionCommand.cs">
+      <Link>Commands\RDP\StopUIARemoteDesktopSessionCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Relatives\GetUiaControlAncestorsCommand.cs">
+      <Link>Commands\Relatives\GetUiaControlAncestorsCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Relatives\GetUiaControlChildrenCommand.cs">
+      <Link>Commands\Relatives\GetUiaControlChildrenCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Relatives\GetUiaControlDescendantsCommand.cs">
+      <Link>Commands\Relatives\GetUiaControlDescendantsCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Relatives\GetUiaControlFirstChildCommand.cs">
+      <Link>Commands\Relatives\GetUiaControlFirstChildCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Relatives\GetUiaControlLastChildCommand.cs">
+      <Link>Commands\Relatives\GetUiaControlLastChildCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Relatives\GetUiaControlNextSiblingCommand.cs">
+      <Link>Commands\Relatives\GetUiaControlNextSiblingCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Relatives\GetUiaControlParentCommand.cs">
+      <Link>Commands\Relatives\GetUiaControlParentCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Relatives\GetUiaControlPreviousSiblingCommand.cs">
+      <Link>Commands\Relatives\GetUiaControlPreviousSiblingCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Relatives\GetUIAControlRelativesCommand.cs">
+      <Link>Commands\Relatives\GetUIAControlRelativesCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Search\SearchUIAControlCommand.cs">
+      <Link>Commands\Search\SearchUIAControlCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Search\SearchUIAWindowCommand.cs">
+      <Link>Commands\Search\SearchUIAWindowCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Settings\SetUIAHighligherSettingsCommand.cs">
+      <Link>Commands\Settings\SetUIAHighligherSettingsCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Settings\SetUIALoggingSettingsCommand.cs">
+      <Link>Commands\Settings\SetUIALoggingSettingsCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Settings\SetUIAModuleSettingsCommand.cs">
+      <Link>Commands\Settings\SetUIAModuleSettingsCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Settings\SetUIAOnErrorActionSettingsCommand.cs">
+      <Link>Commands\Settings\SetUIAOnErrorActionSettingsCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Settings\SetUIAOnSleepActionSettingsCommand.cs">
+      <Link>Commands\Settings\SetUIAOnSleepActionSettingsCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Settings\SetUIAOnSuccessActionSettingsCommand.cs">
+      <Link>Commands\Settings\SetUIAOnSuccessActionSettingsCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Settings\SetUIAScreenshotSettingsCommand.cs">
+      <Link>Commands\Settings\SetUIAScreenshotSettingsCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Settings\ShowUIACurrentDataCommand.cs">
+      <Link>Commands\Settings\ShowUIACurrentDataCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Settings\ShowUIAModuleSettingsCommand.cs">
+      <Link>Commands\Settings\ShowUIAModuleSettingsCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Sheridan\GetUIAshTreeItemCommand.cs">
+      <Link>Commands\Sheridan\GetUIAshTreeItemCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Sheridan\InvokeUIAshTreeItemClickCommand.cs">
+      <Link>Commands\Sheridan\InvokeUIAshTreeItemClickCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Transcript\RecorderForm.cs">
+      <Link>Commands\Transcript\RecorderForm.cs</Link>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Transcript\RecorderForm.Designer.cs">
+      <Link>Commands\Transcript\RecorderForm.Designer.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Transcript\RecorderFrom.xaml.cs">
+      <Link>Commands\Transcript\RecorderFrom.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Transcript\StartUIATranscriptCommand.cs">
+      <Link>Commands\Transcript\StartUIATranscriptCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Transcript\StopUIATranscriptCommand.cs">
+      <Link>Commands\Transcript\StopUIATranscriptCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Transcript\Window1.xaml.cs">
+      <Link>Commands\Transcript\Window1.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\UltraGrid\GetUIAifUltraGridRowCommand.cs">
+      <Link>Commands\UltraGrid\GetUIAifUltraGridRowCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\UltraGrid\GetUIAifUltraGridSelectionCommand.cs">
+      <Link>Commands\UltraGrid\GetUIAifUltraGridSelectionCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\UltraGrid\InvokeUIAifULtraGridSelectItemByNameCommand.cs">
+      <Link>Commands\UltraGrid\InvokeUIAifULtraGridSelectItemByNameCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Wait\WaitUIAControlIsEnabledCommand.cs">
+      <Link>Commands\Wait\WaitUIAControlIsEnabledCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Wait\WaitUIAControlIsVisibleCommand.cs">
+      <Link>Commands\Wait\WaitUIAControlIsVisibleCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Wait\WaitUIAControlStateCommand.cs">
+      <Link>Commands\Wait\WaitUIAControlStateCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Wait\WaitUIAEventRaisedCommand.cs">
+      <Link>Commands\Wait\WaitUIAEventRaisedCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Wait\WaitUIAWindowCommand.cs">
+      <Link>Commands\Wait\WaitUIAWindowCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Win32\SetUIADateTimePickerDateCommand.cs">
+      <Link>Commands\Win32\SetUIADateTimePickerDateCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Wizard\AddUIAWizardStepCommand.cs">
+      <Link>Commands\Wizard\AddUIAWizardStepCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Wizard\GetUIAWizardCommand.cs">
+      <Link>Commands\Wizard\GetUIAWizardCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Wizard\InvokeUIAWizardCommand.cs">
+      <Link>Commands\Wizard\InvokeUIAWizardCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Wizard\NewUIAWizardCommand.cs">
+      <Link>Commands\Wizard\NewUIAWizardCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Wizard\RemoveUIAWizardStepCommand.cs">
+      <Link>Commands\Wizard\RemoveUIAWizardStepCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Commands\Wizard\StepUIAWizardCommand.cs">
+      <Link>Commands\Wizard\StepUIAWizardCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Commands\Banner\AddBannerTextCommand.cs">
+      <Link>Helpers\Commands\Banner\AddBannerTextCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Commands\Banner\HideBannerCommand.cs">
+      <Link>Helpers\Commands\Banner\HideBannerCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Commands\Banner\ShowBannerCommand.cs">
+      <Link>Helpers\Commands\Banner\ShowBannerCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Commands\Cache\StartCachedModeCommand.cs">
+      <Link>Helpers\Commands\Cache\StartCachedModeCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Commands\Cache\StopCachedModeCommand.cs">
+      <Link>Helpers\Commands\Cache\StopCachedModeCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Commands\Common\ClearControlTextCommand.cs">
+      <Link>Helpers\Commands\Common\ClearControlTextCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Commands\Common\GetActiveWindowCommand.cs">
+      <Link>Helpers\Commands\Common\GetActiveWindowCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Commands\Common\GetFocusCommand.cs">
+      <Link>Helpers\Commands\Common\GetFocusCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Commands\Common\HideCurrentHighlighterCommand.cs">
+      <Link>Helpers\Commands\Common\HideCurrentHighlighterCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Commands\Common\InvokeControlClickCommand.cs">
+      <Link>Helpers\Commands\Common\InvokeControlClickCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Commands\Common\InvokeControlContextMenuCommand.cs">
+      <Link>Helpers\Commands\Common\InvokeControlContextMenuCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Commands\Common\InvokeScriptCommand.cs">
+      <Link>Helpers\Commands\Common\InvokeScriptCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Commands\Common\MoveCursorCommand.cs">
+      <Link>Helpers\Commands\Common\MoveCursorCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Commands\Common\SaveScreenshotCommand.cs">
+      <Link>Helpers\Commands\Common\SaveScreenshotCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Commands\Common\SetControlKeysCommand.cs">
+      <Link>Helpers\Commands\Common\SetControlKeysCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Commands\Common\SetControlTextCommand.cs">
+      <Link>Helpers\Commands\Common\SetControlTextCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Commands\Common\SetFocusCommand.cs">
+      <Link>Helpers\Commands\Common\SetFocusCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Commands\Common\ShowDesktopCommand.cs">
+      <Link>Helpers\Commands\Common\ShowDesktopCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Commands\Container\UIANewContainerCommand.cs">
+      <Link>Helpers\Commands\Container\UIANewContainerCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Commands\Convert\ConvertToSearchCriteriaCommand.cs">
+      <Link>Helpers\Commands\Convert\ConvertToSearchCriteriaCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Commands\Event\EventCommand.cs">
+      <Link>Helpers\Commands\Event\EventCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Commands\Event\GetRegisteredEventCommand.cs">
+      <Link>Helpers\Commands\Event\GetRegisteredEventCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Commands\Event\RegisterUnexpectedWindowCommand.cs">
+      <Link>Helpers\Commands\Event\RegisterUnexpectedWindowCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Commands\Event\UnregisterEventCommand.cs">
+      <Link>Helpers\Commands\Event\UnregisterEventCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Commands\Get\GetControlCommand.cs">
+      <Link>Helpers\Commands\Get\GetControlCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Commands\Get\GetDesktopCommand.cs">
+      <Link>Helpers\Commands\Get\GetDesktopCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Commands\Get\GetWindowCommand.cs">
+      <Link>Helpers\Commands\Get\GetWindowCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Commands\Get\TestControlStateCommand.cs">
+      <Link>Helpers\Commands\Get\TestControlStateCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Commands\Pattern\PatternCommand.cs">
+      <Link>Helpers\Commands\Pattern\PatternCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Commands\RDP\UIANewRemoteDesktopProtocolFileCommand.cs">
+      <Link>Helpers\Commands\RDP\UIANewRemoteDesktopProtocolFileCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Commands\UIACommand.cs">
+      <Link>Helpers\Commands\UIACommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Commands\Wait\WaitControlIsEnabledCommand.cs">
+      <Link>Helpers\Commands\Wait\WaitControlIsEnabledCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Commands\Wait\WaitControlIsVisibleCommand.cs">
+      <Link>Helpers\Commands\Wait\WaitControlIsVisibleCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Commands\Wait\WaitControlStateCommand.cs">
+      <Link>Helpers\Commands\Wait\WaitControlStateCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Commands\Wait\WaitEventRaisedCommand.cs">
+      <Link>Helpers\Commands\Wait\WaitEventRaisedCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Commands\Wait\WaitWindowCommand.cs">
+      <Link>Helpers\Commands\Wait\WaitWindowCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Commands\Wizard\AddWizardStepCommand.cs">
+      <Link>Helpers\Commands\Wizard\AddWizardStepCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Commands\Wizard\GetWizardCommand.cs">
+      <Link>Helpers\Commands\Wizard\GetWizardCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Commands\Wizard\InvokeWizardCommand.cs">
+      <Link>Helpers\Commands\Wizard\InvokeWizardCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Commands\Wizard\NewWizardCommand.cs">
+      <Link>Helpers\Commands\Wizard\NewWizardCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Commands\Wizard\RemoveWizardStepCommand.cs">
+      <Link>Helpers\Commands\Wizard\RemoveWizardStepCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Commands\Wizard\StepWizardCommand.cs">
+      <Link>Helpers\Commands\Wizard\StepWizardCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Inheritance\CacheRequestCmdletBase.cs">
+      <Link>Helpers\Inheritance\CacheRequestCmdletBase.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Inheritance\CommonCmdletBase.cs">
+      <Link>Helpers\Inheritance\CommonCmdletBase.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Inheritance\ConvertToCmdletBase.cs">
+      <Link>Helpers\Inheritance\ConvertToCmdletBase.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Inheritance\DiscoveryCmdletBase.cs">
+      <Link>Helpers\Inheritance\DiscoveryCmdletBase.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Inheritance\EventCmdletBase.cs">
+      <Link>Helpers\Inheritance\EventCmdletBase.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Inheritance\ExecutionPlanCmdletBase.cs">
+      <Link>Helpers\Inheritance\ExecutionPlanCmdletBase.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Inheritance\Get\GetCmdletBase.cs">
+      <Link>Helpers\Inheritance\Get\GetCmdletBase.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Inheritance\Get\GetControlCmdletBase.cs">
+      <Link>Helpers\Inheritance\Get\GetControlCmdletBase.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Inheritance\Get\GetControlCollectionCmdletBase.cs">
+      <Link>Helpers\Inheritance\Get\GetControlCollectionCmdletBase.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Inheritance\Get\GetControlStateCmdletBase.cs">
+      <Link>Helpers\Inheritance\Get\GetControlStateCmdletBase.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Inheritance\Get\GetFamilyCmdletBase.cs">
+      <Link>Helpers\Inheritance\Get\GetFamilyCmdletBase.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Inheritance\Get\GetRelativesCmdletBase.cs">
+      <Link>Helpers\Inheritance\Get\GetRelativesCmdletBase.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Inheritance\Get\GetWindowCmdletBase.cs">
+      <Link>Helpers\Inheritance\Get\GetWindowCmdletBase.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Inheritance\HasControlInputCmdletBase.cs">
+      <Link>Helpers\Inheritance\HasControlInputCmdletBase.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Inheritance\HasScriptBlockCmdletBase.cs">
+      <Link>Helpers\Inheritance\HasScriptBlockCmdletBase.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Inheritance\HasTimeoutCmdletBase.cs">
+      <Link>Helpers\Inheritance\HasTimeoutCmdletBase.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Inheritance\HotkeyCmdletBase.cs">
+      <Link>Helpers\Inheritance\HotkeyCmdletBase.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Inheritance\PatternCmdletBase.cs">
+      <Link>Helpers\Inheritance\PatternCmdletBase.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Inheritance\ProfileCmdletBase.cs">
+      <Link>Helpers\Inheritance\ProfileCmdletBase.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Inheritance\ProfileInputCmdletBase.cs">
+      <Link>Helpers\Inheritance\ProfileInputCmdletBase.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Inheritance\RDPCmdletBase.cs">
+      <Link>Helpers\Inheritance\RDPCmdletBase.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Inheritance\ReadAndConvertCmdletBase.cs">
+      <Link>Helpers\Inheritance\ReadAndConvertCmdletBase.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Inheritance\ReadCmdletBase.cs">
+      <Link>Helpers\Inheritance\ReadCmdletBase.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Inheritance\SearchCmdletBase.cs">
+      <Link>Helpers\Inheritance\SearchCmdletBase.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Inheritance\Settings\ModuleSettingsActionCmdletBase.cs">
+      <Link>Helpers\Inheritance\Settings\ModuleSettingsActionCmdletBase.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Inheritance\Settings\ModuleSettingsCmdletBase.cs">
+      <Link>Helpers\Inheritance\Settings\ModuleSettingsCmdletBase.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Inheritance\SheridanCmdletBase.cs">
+      <Link>Helpers\Inheritance\SheridanCmdletBase.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Inheritance\TranscriptCmdletBase.cs">
+      <Link>Helpers\Inheritance\TranscriptCmdletBase.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Inheritance\ULtraGridCmdletBase.cs">
+      <Link>Helpers\Inheritance\ULtraGridCmdletBase.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Inheritance\WaitCmdletBase.cs">
+      <Link>Helpers\Inheritance\WaitCmdletBase.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Inheritance\Win32CmdletBase.cs">
+      <Link>Helpers\Inheritance\Win32CmdletBase.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Inheritance\Wizard\WizardCmdletBase.cs">
+      <Link>Helpers\Inheritance\Wizard\WizardCmdletBase.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Inheritance\Wizard\WizardConstructionCmdletBase.cs">
+      <Link>Helpers\Inheritance\Wizard\WizardConstructionCmdletBase.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Inheritance\Wizard\WizardContainerCmdletBase.cs">
+      <Link>Helpers\Inheritance\Wizard\WizardContainerCmdletBase.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Inheritance\Wizard\WizardRunCmdletBase.cs">
+      <Link>Helpers\Inheritance\Wizard\WizardRunCmdletBase.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\Inheritance\Wizard\WizardStepCmdletBase.cs">
+      <Link>Helpers\Inheritance\Wizard\WizardStepCmdletBase.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Adapters\Enums.cs">
+      <Link>Helpers\UnderlyingCode\Adapters\Enums.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Adapters\SourcePatternEmulator.cs">
+      <Link>Helpers\UnderlyingCode\Adapters\SourcePatternEmulator.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Adapters\UiaAutomation.cs">
+      <Link>Helpers\UnderlyingCode\Adapters\UiaAutomation.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Adapters\UiaDockPattern.cs">
+      <Link>Helpers\UnderlyingCode\Adapters\UiaDockPattern.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Adapters\UiaExpandCollapsePattern.cs">
+      <Link>Helpers\UnderlyingCode\Adapters\UiaExpandCollapsePattern.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Adapters\UiaGridItemPattern.cs">
+      <Link>Helpers\UnderlyingCode\Adapters\UiaGridItemPattern.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Adapters\UiaGridPattern.cs">
+      <Link>Helpers\UnderlyingCode\Adapters\UiaGridPattern.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Adapters\UiaInvokePattern.cs">
+      <Link>Helpers\UnderlyingCode\Adapters\UiaInvokePattern.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Adapters\UiaRangeValuePattern.cs">
+      <Link>Helpers\UnderlyingCode\Adapters\UiaRangeValuePattern.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Adapters\UiaScrollItemPattern.cs">
+      <Link>Helpers\UnderlyingCode\Adapters\UiaScrollItemPattern.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Adapters\UiaScrollPattern.cs">
+      <Link>Helpers\UnderlyingCode\Adapters\UiaScrollPattern.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Adapters\UiaSelectionItemPattern.cs">
+      <Link>Helpers\UnderlyingCode\Adapters\UiaSelectionItemPattern.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Adapters\UiaSelectionPattern.cs">
+      <Link>Helpers\UnderlyingCode\Adapters\UiaSelectionPattern.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Adapters\UiaTableItemPattern.cs">
+      <Link>Helpers\UnderlyingCode\Adapters\UiaTableItemPattern.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Adapters\UiaTablePattern.cs">
+      <Link>Helpers\UnderlyingCode\Adapters\UiaTablePattern.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Adapters\UiaTextPattern.cs">
+      <Link>Helpers\UnderlyingCode\Adapters\UiaTextPattern.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Adapters\UiaTogglePattern.cs">
+      <Link>Helpers\UnderlyingCode\Adapters\UiaTogglePattern.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Adapters\UiaTransformPattern.cs">
+      <Link>Helpers\UnderlyingCode\Adapters\UiaTransformPattern.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Adapters\UiaValuePattern.cs">
+      <Link>Helpers\UnderlyingCode\Adapters\UiaValuePattern.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Adapters\UiaWindowPattern.cs">
+      <Link>Helpers\UnderlyingCode\Adapters\UiaWindowPattern.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Adapters\UiControlInputHolder.cs">
+      <Link>Helpers\UnderlyingCode\Adapters\UiControlInputHolder.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Adapters\UiElement.cs">
+      <Link>Helpers\UnderlyingCode\Adapters\UiElement.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Adapters\UiElementInformation.cs">
+      <Link>Helpers\UnderlyingCode\Adapters\UiElementInformation.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Adapters\UiEltCollection.cs">
+      <Link>Helpers\UnderlyingCode\Adapters\UiEltCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Adapters\UiExtendedModelHolder.cs">
+      <Link>Helpers\UnderlyingCode\Adapters\UiExtendedModelHolder.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Adapters\UiInputHolder.cs">
+      <Link>Helpers\UnderlyingCode\Adapters\UiInputHolder.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Adapters\UiKeyboardInputHolder.cs">
+      <Link>Helpers\UnderlyingCode\Adapters\UiKeyboardInputHolder.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Adapters\UiMouseInputHolder.cs">
+      <Link>Helpers\UnderlyingCode\Adapters\UiMouseInputHolder.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Adapters\UiTouchInputHolder.cs">
+      <Link>Helpers\UnderlyingCode\Adapters\UiTouchInputHolder.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Aspects\AbstractInterceptor.cs">
+      <Link>Helpers\UnderlyingCode\Aspects\AbstractInterceptor.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Aspects\ErrorHandlingAspect.cs">
+      <Link>Helpers\UnderlyingCode\Aspects\ErrorHandlingAspect.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Aspects\FaultInjectionAspect.cs">
+      <Link>Helpers\UnderlyingCode\Aspects\FaultInjectionAspect.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Aspects\HighlighterAspect.cs">
+      <Link>Helpers\UnderlyingCode\Aspects\HighlighterAspect.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Aspects\InputValidationAspect.cs">
+      <Link>Helpers\UnderlyingCode\Aspects\InputValidationAspect.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Aspects\LoggingAspect.cs">
+      <Link>Helpers\UnderlyingCode\Aspects\LoggingAspect.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Aspects\MethodSelectorAspect.cs">
+      <Link>Helpers\UnderlyingCode\Aspects\MethodSelectorAspect.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Aspects\ParameterValidationAspect.cs">
+      <Link>Helpers\UnderlyingCode\Aspects\ParameterValidationAspect.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Aspects\TestResultAspect.cs">
+      <Link>Helpers\UnderlyingCode\Aspects\TestResultAspect.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Attributes\UiaParameterAttribute.cs">
+      <Link>Helpers\UnderlyingCode\Attributes\UiaParameterAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Attributes\UiaSpecialBindingAttribute.cs">
+      <Link>Helpers\UnderlyingCode\Attributes\UiaSpecialBindingAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\ControlProviders\ControlFromUiaComProvider.cs">
+      <Link>Helpers\UnderlyingCode\ControlProviders\ControlFromUiaComProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\ControlProviders\ControlFromUiaProvider.cs">
+      <Link>Helpers\UnderlyingCode\ControlProviders\ControlFromUiaProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\ControlProviders\ControlFromWin32Provider.cs">
+      <Link>Helpers\UnderlyingCode\ControlProviders\ControlFromWin32Provider.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\ControlProviders\ControlProviderTemplate.cs">
+      <Link>Helpers\UnderlyingCode\ControlProviders\ControlProviderTemplate.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Converters\ConverterTemplate.cs">
+      <Link>Helpers\UnderlyingCode\Converters\ConverterTemplate.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Converters\ElementToSearchCriteriaConverter.cs">
+      <Link>Helpers\UnderlyingCode\Converters\ElementToSearchCriteriaConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Converters\SearchCriteriaToElementConverter.cs">
+      <Link>Helpers\UnderlyingCode\Converters\SearchCriteriaToElementConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\ExtensionMethods\ExtensionMethods.cs">
+      <Link>Helpers\UnderlyingCode\ExtensionMethods\ExtensionMethods.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\ExtensionMethods\ExtensionMethodsCollection.cs">
+      <Link>Helpers\UnderlyingCode\ExtensionMethods\ExtensionMethodsCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\ExtensionMethods\ExtensionMethodsElement.cs">
+      <Link>Helpers\UnderlyingCode\ExtensionMethods\ExtensionMethodsElement.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\ExtensionMethods\ExtensionMethodsElementCommon.cs">
+      <Link>Helpers\UnderlyingCode\ExtensionMethods\ExtensionMethodsElementCommon.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\ExtensionMethods\ExtensionMethodsElementExtended.cs">
+      <Link>Helpers\UnderlyingCode\ExtensionMethods\ExtensionMethodsElementExtended.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\ExtensionMethods\ExtensionMethodsElementPatterns.cs">
+      <Link>Helpers\UnderlyingCode\ExtensionMethods\ExtensionMethodsElementPatterns.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Internal\ExecutionPlan.cs">
+      <Link>Helpers\UnderlyingCode\Internal\ExecutionPlan.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Internal\ExSpyCode.cs">
+      <Link>Helpers\UnderlyingCode\Internal\ExSpyCode.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Internal\Global.cs">
+      <Link>Helpers\UnderlyingCode\Internal\Global.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Internal\Highligher.cs">
+      <Link>Helpers\UnderlyingCode\Internal\Highligher.cs</Link>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Internal\JavaHelper.cs">
+      <Link>Helpers\UnderlyingCode\Internal\JavaHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Internal\LogEntry.cs">
+      <Link>Helpers\UnderlyingCode\Internal\LogEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Internal\LogHelper.cs">
+      <Link>Helpers\UnderlyingCode\Internal\LogHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Internal\NativeMethods.cs">
+      <Link>Helpers\UnderlyingCode\Internal\NativeMethods.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Internal\RDPHelper.cs">
+      <Link>Helpers\UnderlyingCode\Internal\RDPHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Internal\UIAHelper.cs">
+      <Link>Helpers\UnderlyingCode\Internal\UIAHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Internal\WizardHelper.cs">
+      <Link>Helpers\UnderlyingCode\Internal\WizardHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\NewModel\ContextMenuSearcherData.cs">
+      <Link>Helpers\UnderlyingCode\NewModel\ContextMenuSearcherData.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\NewModel\ControlSearcherData.cs">
+      <Link>Helpers\UnderlyingCode\NewModel\ControlSearcherData.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\NewModel\ControlSearcherTemplateData.cs">
+      <Link>Helpers\UnderlyingCode\NewModel\ControlSearcherTemplateData.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\NewModel\HandleCollector.cs">
+      <Link>Helpers\UnderlyingCode\NewModel\HandleCollector.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\NewModel\SearcherTemplateData.cs">
+      <Link>Helpers\UnderlyingCode\NewModel\SearcherTemplateData.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\NewModel\SingleControlSearcherData.cs">
+      <Link>Helpers\UnderlyingCode\NewModel\SingleControlSearcherData.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\NewModel\TimeoutManager.cs">
+      <Link>Helpers\UnderlyingCode\NewModel\TimeoutManager.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\NewModel\WindowSearcherData.cs">
+      <Link>Helpers\UnderlyingCode\NewModel\WindowSearcherData.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Ninject\AutomationFactory.cs">
+      <Link>Helpers\UnderlyingCode\Ninject\AutomationFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Ninject\ChildKernelModule.cs">
+      <Link>Helpers\UnderlyingCode\Ninject\ChildKernelModule.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Ninject\ObjectLifecycleModule.cs">
+      <Link>Helpers\UnderlyingCode\Ninject\ObjectLifecycleModule.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\RDP\DataProtectionForRDPWrapper.cs">
+      <Link>Helpers\UnderlyingCode\RDP\DataProtectionForRDPWrapper.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\RDP\DataProtector.cs">
+      <Link>Helpers\UnderlyingCode\RDP\DataProtector.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Searchers\ContextMenuSearcher.cs">
+      <Link>Helpers\UnderlyingCode\Searchers\ContextMenuSearcher.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Searchers\ControlSearcher.cs">
+      <Link>Helpers\UnderlyingCode\Searchers\ControlSearcher.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Searchers\SearcherTemplate.cs">
+      <Link>Helpers\UnderlyingCode\Searchers\SearcherTemplate.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Searchers\WindowSearcher.cs">
+      <Link>Helpers\UnderlyingCode\Searchers\WindowSearcher.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Types\ClickSettings.cs">
+      <Link>Helpers\UnderlyingCode\Types\ClickSettings.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Types\Enums.cs">
+      <Link>Helpers\UnderlyingCode\Types\Enums.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Types\ScreenshotSquare.cs">
+      <Link>Helpers\UnderlyingCode\Types\ScreenshotSquare.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Types\Wizard.cs">
+      <Link>Helpers\UnderlyingCode\Types\Wizard.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Types\WizardCollection.cs">
+      <Link>Helpers\UnderlyingCode\Types\WizardCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UnderlyingCode\Types\WizardStep.cs">
+      <Link>Helpers\UnderlyingCode\Types\WizardStep.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UserSettings\CurrentData.cs">
+      <Link>Helpers\UserSettings\CurrentData.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UserSettings\Preferences.cs">
+      <Link>Helpers\UserSettings\Preferences.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Helpers\UserSettings\Profile.cs">
+      <Link>Helpers\UserSettings\Profile.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Element\ISupportsCached.cs">
+      <Link>Interface\Element\ISupportsCached.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Element\ISupportsConversion.cs">
+      <Link>Interface\Element\ISupportsConversion.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Element\ISupportsCurrent.cs">
+      <Link>Interface\Element\ISupportsCurrent.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Element\ISupportsDockPattern.cs">
+      <Link>Interface\Element\ISupportsDockPattern.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Element\ISupportsExpandCollapsePattern.cs">
+      <Link>Interface\Element\ISupportsExpandCollapsePattern.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Element\ISupportsExport.cs">
+      <Link>Interface\Element\ISupportsExport.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Element\ISupportsExtendedModel.cs">
+      <Link>Interface\Element\ISupportsExtendedModel.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Element\ISupportsGridItemPattern.cs">
+      <Link>Interface\Element\ISupportsGridItemPattern.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Element\ISupportsGridPattern.cs">
+      <Link>Interface\Element\ISupportsGridPattern.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Element\ISupportsHighlighter.cs">
+      <Link>Interface\Element\ISupportsHighlighter.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Element\ISupportsInvokePattern.cs">
+      <Link>Interface\Element\ISupportsInvokePattern.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Element\ISupportsNavigation.cs">
+      <Link>Interface\Element\ISupportsNavigation.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Element\ISupportsRangeValuePattern.cs">
+      <Link>Interface\Element\ISupportsRangeValuePattern.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Element\ISupportsRefresh.cs">
+      <Link>Interface\Element\ISupportsRefresh.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Element\ISupportsScrollItemPattern.cs">
+      <Link>Interface\Element\ISupportsScrollItemPattern.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Element\ISupportsScrollPattern.cs">
+      <Link>Interface\Element\ISupportsScrollPattern.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Element\ISupportsSelectionItemPattern.cs">
+      <Link>Interface\Element\ISupportsSelectionItemPattern.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Element\ISupportsSelectionPattern.cs">
+      <Link>Interface\Element\ISupportsSelectionPattern.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Element\ISupportsTableItemPattern.cs">
+      <Link>Interface\Element\ISupportsTableItemPattern.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Element\ISupportsTablePattern.cs">
+      <Link>Interface\Element\ISupportsTablePattern.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Element\ISupportsTextPattern.cs">
+      <Link>Interface\Element\ISupportsTextPattern.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Element\ISupportsTogglePattern.cs">
+      <Link>Interface\Element\ISupportsTogglePattern.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Element\ISupportsTransformPattern.cs">
+      <Link>Interface\Element\ISupportsTransformPattern.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Element\ISupportsValuePattern.cs">
+      <Link>Interface\Element\ISupportsValuePattern.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Element\ISupportsWindowPattern.cs">
+      <Link>Interface\Element\ISupportsWindowPattern.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Helper\IHandleCollector.cs">
+      <Link>Interface\Helper\IHandleCollector.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Holder\IControlInput.cs">
+      <Link>Interface\Holder\IControlInput.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Holder\IControlInputHolder.cs">
+      <Link>Interface\Holder\IControlInputHolder.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Holder\IExtendedModel.cs">
+      <Link>Interface\Holder\IExtendedModel.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Holder\IExtendedModelHolder.cs">
+      <Link>Interface\Holder\IExtendedModelHolder.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Holder\IHolder.cs">
+      <Link>Interface\Holder\IHolder.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Holder\IInputSimulatorHolder.cs">
+      <Link>Interface\Holder\IInputSimulatorHolder.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Holder\IKeyboardInput.cs">
+      <Link>Interface\Holder\IKeyboardInput.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Holder\IKeyboardInputHolder.cs">
+      <Link>Interface\Holder\IKeyboardInputHolder.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Holder\IMouseInput.cs">
+      <Link>Interface\Holder\IMouseInput.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Holder\IMouseInputHolder.cs">
+      <Link>Interface\Holder\IMouseInputHolder.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Holder\ITouchInput.cs">
+      <Link>Interface\Holder\ITouchInput.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Holder\ITouchInputHolder.cs">
+      <Link>Interface\Holder\ITouchInputHolder.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\IAutomation.cs">
+      <Link>Interface\IAutomation.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\IUiElement.cs">
+      <Link>Interface\IUiElement.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\IUiElementInformation.cs">
+      <Link>Interface\IUiElementInformation.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\IUiEltCollection.cs">
+      <Link>Interface\IUiEltCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Pattern\IBasePattern.cs">
+      <Link>Interface\Pattern\IBasePattern.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Pattern\IDockPattern.cs">
+      <Link>Interface\Pattern\IDockPattern.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Pattern\IDockPatternInformation.cs">
+      <Link>Interface\Pattern\IDockPatternInformation.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Pattern\IExpandCollapsePattern.cs">
+      <Link>Interface\Pattern\IExpandCollapsePattern.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Pattern\IExpandCollapsePatternInformation.cs">
+      <Link>Interface\Pattern\IExpandCollapsePatternInformation.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Pattern\IGridItemPattern.cs">
+      <Link>Interface\Pattern\IGridItemPattern.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Pattern\IGridItemPatternInformation.cs">
+      <Link>Interface\Pattern\IGridItemPatternInformation.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Pattern\IGridPattern.cs">
+      <Link>Interface\Pattern\IGridPattern.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Pattern\IGridPatternInformation.cs">
+      <Link>Interface\Pattern\IGridPatternInformation.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Pattern\IInvokePattern.cs">
+      <Link>Interface\Pattern\IInvokePattern.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Pattern\IRangeValuePattern.cs">
+      <Link>Interface\Pattern\IRangeValuePattern.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Pattern\IRangeValuePatternInformation.cs">
+      <Link>Interface\Pattern\IRangeValuePatternInformation.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Pattern\IScrollItemPattern.cs">
+      <Link>Interface\Pattern\IScrollItemPattern.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Pattern\IScrollPattern.cs">
+      <Link>Interface\Pattern\IScrollPattern.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Pattern\IScrollPatternInformation.cs">
+      <Link>Interface\Pattern\IScrollPatternInformation.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Pattern\ISelectionItemPattern.cs">
+      <Link>Interface\Pattern\ISelectionItemPattern.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Pattern\ISelectionItemPatternInformation.cs">
+      <Link>Interface\Pattern\ISelectionItemPatternInformation.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Pattern\ISelectionPattern.cs">
+      <Link>Interface\Pattern\ISelectionPattern.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Pattern\ISelectionPatternInformation.cs">
+      <Link>Interface\Pattern\ISelectionPatternInformation.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Pattern\ITableItemPattern.cs">
+      <Link>Interface\Pattern\ITableItemPattern.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Pattern\ITableItemPatternInformation.cs">
+      <Link>Interface\Pattern\ITableItemPatternInformation.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Pattern\ITablePattern.cs">
+      <Link>Interface\Pattern\ITablePattern.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Pattern\ITablePatternInformation.cs">
+      <Link>Interface\Pattern\ITablePatternInformation.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Pattern\ITextPattern.cs">
+      <Link>Interface\Pattern\ITextPattern.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Pattern\ITogglePattern.cs">
+      <Link>Interface\Pattern\ITogglePattern.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Pattern\ITogglePatternInformation.cs">
+      <Link>Interface\Pattern\ITogglePatternInformation.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Pattern\ITransformPattern.cs">
+      <Link>Interface\Pattern\ITransformPattern.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Pattern\ITransformPatternInformation.cs">
+      <Link>Interface\Pattern\ITransformPatternInformation.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Pattern\IValuePattern.cs">
+      <Link>Interface\Pattern\IValuePattern.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Pattern\IValuePatternInformation.cs">
+      <Link>Interface\Pattern\IValuePatternInformation.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Pattern\IWindowPattern.cs">
+      <Link>Interface\Pattern\IWindowPattern.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Interface\Pattern\IWindowPatternInformation.cs">
+      <Link>Interface\Pattern\IWindowPatternInformation.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Properties\AssemblyInfo.cs">
+      <Link>Properties\AssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Provider\UIAProvider.cs">
+      <Link>Provider\UIAProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\UIAutomation\Resources\Resource.cs">
+      <Link>Resources\Resource.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="..\UIAutomation\Commands\Transcript\RecorderFrom.xaml">
+      <Link>Commands\Transcript\RecorderFrom.xaml</Link>
+    </Page>
+    <Page Include="..\UIAutomation\Commands\Transcript\Window1.xaml">
+      <Link>Commands\Transcript\Window1.xaml</Link>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+</Project>

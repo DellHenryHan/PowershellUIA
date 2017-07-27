@@ -1,0 +1,2 @@
+C:\Workspaces\STUPS\Uia\Addins\IRAddin\bin\Debug\IRAddin.dll
+C:\Workspaces\STUPS\Uia\Addins\IRAddin\obj\x86\Debug\IRAddin.dll

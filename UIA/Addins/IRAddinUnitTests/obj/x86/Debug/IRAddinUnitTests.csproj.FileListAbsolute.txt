@@ -1,0 +1,4 @@
+C:\Workspaces\STUPS\Uia\Addins\IRAddinUnitTests\bin\Debug\IRAddinUnitTests.dll
+C:\Workspaces\STUPS\Uia\Addins\IRAddinUnitTests\bin\Debug\IRAddinUnitTests.pdb
+C:\Workspaces\STUPS\Uia\Addins\IRAddinUnitTests\obj\x86\Debug\IRAddinUnitTests.dll
+C:\Workspaces\STUPS\Uia\Addins\IRAddinUnitTests\obj\x86\Debug\IRAddinUnitTests.pdb
